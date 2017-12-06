@@ -1,0 +1,24 @@
+#/bin/bash
+acerto=0
+
+lynx -dump http://supersena.com.br/megasena/ | egrep -e "\* [0123456789]{2}"| tr -d "* " | sort > sorteio_mega.txt
+
+echo "numeros sorteados"  $(cat sorteio_mega.txt)
+
+cat mega1949.txt  | while read linha
+	do
+	cat sorteio_mega.txt | while read  coluna 
+		do
+			echo $linha | grep -q $coluna
+		 	if [ $? = 0  ] ; then
+			#	echo 'valor encontrado'
+				echo $coluna
+				#let acerto=acerto+1
+			else
+				echo 'nao marcou'
+			fi
+		done
+		echo "----------------------------"
+		echo $linha "numero da aposta"
+		echo "----------------------------"
+	done
