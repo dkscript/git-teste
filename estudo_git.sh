@@ -65,3 +65,83 @@ git reset --soft #(volta as modificacoes e deixa pronto pro commit)
 git reset --mixed #(volta para antes do staged)
 git reset --hard #(volta tudo)
 
+#Repositori remoto
+
+#criando repositorio no githbub
+
+#seguindo os passos do site
+
+criando acesso ao repositorio remoto
+
+git remote add origin git@github.com:[endereco do repositorio remoto ponto git]
+
+git remote
+ mostar o repositorio criado, neste caso o repositorio é o origin
+
+git remote -v 
+mostra mais informações, neste caso os endereços onde esta armazenado
+
+git push -u origin master
+
+-u traquer para nao precisar digitar tudo novamente
+
+origin repositorio remoto 
+master branch atual que estou utilizando
+
+na proxima vez
+somente git push para subir conteudo que ja foi comitado
+
+#----------
+
+Clonando repositorio
+
+git clone
+
+git clone git@github.com:[endereco do github ponto git] [nome do diretorio]
+#---------
+
+Fork
+
+Copia repositorios de outros para voce
+primeiro faz um fork do projeto
+
+#--------
+Branch?
+
+é um ponteiro movel que leva a um commit
+
+branch aponta para commit
+
+porque utilizar isto
+vantagens
+pode modificar aquivos sem alterar o principal, o master
+facilmente desligavel
+multiplas pessoas trabalhando
+evita conflitos
+
+#-----
+criando um branch
+
+git checkout - b teste
+
+cria e entra no branch
+
+git branch
+
+lista os branch
+
+para mudar de branch usa-se
+ git checkout master
+ git checkout teste
+
+para deletar um branch
+
+ git branch -D teste
+
+#---------
+
+Uniao de branch
+
+Passo a passo - Merge
+
+
