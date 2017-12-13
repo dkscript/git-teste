@@ -144,4 +144,29 @@ Uniao de branch
 
 Passo a passo - Merge
 
+cria-se um commit para juntar os outros branchs
+
+operacao nao destrutiva
+
+
+Passo a passo - Rebase
+
+junta tudo de forma linear
+evita commits extras
+perda a ordem cornologica
+muda o historico
+
+
+git merge branch
+
+git rebase branch
+
+
+git stash
+ preserva um arquivo para editar depois
+
+Alias
+
+
+
 
